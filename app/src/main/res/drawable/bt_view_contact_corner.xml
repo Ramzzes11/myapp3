@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--TODO ctrl+alt+l нажати-->
+<!--TODO Для чого android:gradientRadius?-->
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 <item android:state_pressed="false">
     <shape android:shape="rectangle">

@@ -1,3 +1,4 @@
+<!--TODO фото в принципі не потрібне, бо є picturepic.png-->
 <vector android:autoMirrored="true" android:height="48dp"
     android:tint="#5B5555" android:viewportHeight="24"
     android:viewportWidth="24" android:width="48dp" xmlns:android="http://schemas.android.com/apk/res/android">

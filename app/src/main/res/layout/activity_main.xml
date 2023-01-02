@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--TODO при зміні розміру екрану, дизайн зсувається-->
+<!--TODO backgroundTint колір задано 1) хардкодно 2) навішо тут зелений колір?-->
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -13,6 +15,7 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.5" />
 
+<!--    TODO bias'и не впливають-->
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="0dp"
@@ -25,6 +28,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
+<!--        TODO Можливо, layout_marginTop і layout_marginStart є хардкодними, бо при зміні розмірів екрану елемент пропорційно не зміщується-->
+<!--        TODO tools:ignore="MissingConstraints" зайвий-->
         <TextView
             android:id="@+id/setting"
             style="@style/TextView.White"
@@ -36,6 +41,8 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
 
+<!--        TODO layout_constraintHorizontal_bias зсуває зображення від центру. Треба прибрати    -->
+<!--        TODO В tools:ignore є зайві значення, наприклад MissingConstraints-->
         <ImageView
             android:id="@+id/appCompatImageView"
             android:layout_width="150dp"
@@ -49,6 +56,7 @@
             app:layout_constraintVertical_bias="0.259"
             tools:ignore="MissingClass,MissingConstraints,ImageContrastCheck" />
 
+<!--        TODO Для чого layout_constraintVertical_bias, якщо цей елемент обмежений зверху і знизу-->
         <TextView
             android:id="@+id/name_surname"
             style="@style/TextView.White"
@@ -61,6 +69,8 @@
             app:layout_constraintTop_toBottomOf="@+id/appCompatImageView"
             app:layout_constraintVertical_bias="0.65999997" />
 
+<!--        TODO Недоречне значення id-->
+<!--        TODO layout_constraintVertical_bias можна замінити на щось краще-->
         <TextView
             android:id="@+id/home_address"
             style="@style/TextView.White"
@@ -73,6 +83,8 @@
             app:layout_constraintTop_toBottomOf="@+id/appCompatImageView"
             app:layout_constraintVertical_bias="0.471" />
 
+<!--        TODO Значення id незрозуміле-->
+<!--        TODO layout_constraintVertical_bias треба замінити-->
         <TextView
             android:id="@+id/textView4"
             style="@style/TextView.White"
@@ -86,6 +98,7 @@
             app:layout_constraintVertical_bias="0.39" />
     </android.support.constraint.ConstraintLayout>
 
+<!--    TODO TODO bias'и не впливають-->
     <android.support.constraint.ConstraintLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -130,6 +143,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0" />
 
+<!--        TODO елементи не у відсортованому порядку на макеті-->
+<!--        TODO tools:visibility="visible" не впливає-->
         <TextView
             android:id="@+id/textV_go_to_settings"
             style="@style/TextView.Black"
@@ -141,6 +156,8 @@
             app:layout_constraintStart_toStartOf="@+id/edit_profile"
             tools:visibility="visible" />
 
+<!--        TODO tools:ignore="MissingConstraints" зайве. Далі теж-->
+<!--        TODO Три ImageView можна занести у Flow, щоб вони були систематизовані-->
         <Button
             android:id="@+id/f_book"
             android:layout_width="60dp"
@@ -152,11 +169,12 @@
             app:layout_constraintTop_toTopOf="@+id/button_in"
             tools:ignore="MissingConstraints,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
+<!--    TODO layout_constraintVertical_bias зайвий-->
         <Button
             android:id="@+id/button_in"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
-           android:background="@drawable/button_in"
+            android:background="@drawable/button_in"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

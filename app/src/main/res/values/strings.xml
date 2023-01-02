@@ -1,6 +1,8 @@
 <resources>
+<!--    TODO змінити назву додатку на потрібну-->
     <string name="app_name">MyApp20</string>
     <string name="Setting">Settings</string>
+<!--    TODO address-->
     <string name="home_addres">Home address</string>
     <string name="career">Career</string>
     <string name="name_surname">Name Surname</string>
@@ -13,7 +15,10 @@
     <string name="e_mail">E-mail</string>
     <string name="lets_get_acquainted">Let\'s get acquainted</string>
     <string name="fill_out_the_profil">Fill out the profile and go to the application!</string>
+<!--    TODO для чого це?-->
     <string name="mail_examp">lucile.alvarado@gmail.com</string>
+<!--    TODO password-->
+<!--    TODO Для чого це?-->
     <string name="pasword">000000000</string>
     <string name="password">Password</string>
     <string name="remember_my">Remember my</string>
@@ -22,9 +27,11 @@
     <string name="by_clicking">By clicking Register you agree to our Terms \n and Conditions </string>
     <string name="register">REGISTER</string>
     <string name="or">or</string>
+<!--    TODO google має пробіли в значенні ресурсу-->
     <string name="google">    GOOGLE</string>
     <string name="valid_email">Valid Email</string>
     <string name="valid_password">Valid Password</string>
+<!--    TODO required_filled-->
     <string name="requir_filld">Required filled *</string>
 
 </resources>

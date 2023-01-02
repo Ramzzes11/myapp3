@@ -1,4 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?><!--TODO Назва макету не auch, а auth-->
+<!--TODO якщо змінити розмір екрану елементи можуть непропорційно розташуватись-->
+<!--TODO android:foregroundTint теж зробити з посиланням на ресурс, а не хардкодне значення-->
+<!--TODO android:textAlignment="textEnd" - чи доречний тут цей атрибут? Тобто, а на що він дійсно впливає?-->
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,7 +12,11 @@
     android:textAlignment="textEnd"
     android:textDirection="firstStrongRtl">
 
-
+    <!--    TODO тип усіх елементів замінити на AppCompat. Наприклад, TextView → AppCompatTextView-->
+    <!--    TODO в android:id помилка у слові acount. Має бути account-->
+    <!--    TODO розміри, що вказуються у dp, sp необхідно винести в окремий файл і використовувати посилання на них-->
+    <!--    TODO app:layout_constraintHorizontal_bias можна прибрати, бо він якраз зараз зміщує текст вправо, значення середини - це 0.5, або краще просто видалити цей атрибут, щоб значення було по замовчуванню (0.5)-->
+    <!--    TODO щодо використання app:layout_constraintVertical_bias - не знаю, я сам використовував guideline'и, бо так рекомендували. bias теж використовує динамічне розташування, по відношенню до діагоналі екрану, але це не guideline-->
     <TextView
         android:id="@+id/textV_get_acount"
         style="@style/TextView.White"
@@ -22,6 +29,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.121" />
 
+    <!--    TODO назва id незрозуміла. Треба скористатись цим https://discord.com/channels/534496884849639455/862735944679424020/864019560587591700-->
+    <!--    TODO tools:ignore="MissingConstraints" зайве, бо обмеження прописані-->
+    <!--    TODO знак + можна не вказувати перед id в constraint'ах-->
     <TextView
         android:id="@+id/fill"
         style="@style/TextView.White"
@@ -33,6 +43,9 @@
         app:layout_constraintTop_toBottomOf="@+id/textV_get_acount"
         tools:ignore="MissingConstraints" />
 
+    <!--    TODO відсортувати порядок оголошень елементів у макеті, щоб вони послідовно з'являлись у тому порядку, у якому відображаються в дизайні -->
+    <!--    TODO android:text не "my", а "me". І в значенні ресурсу теж-->
+    <!--    TODO виставити одразу галочку в чекбоксі-->
     <CheckBox
         android:id="@+id/checkBox_remember_my"
         style="@style/TextView.Gray14"
@@ -43,6 +56,7 @@
         app:layout_constraintStart_toStartOf="@+id/til_editTextPassword"
         app:layout_constraintTop_toBottomOf="@+id/til_editTextPassword" />
 
+    <!--    TODO замість bias можна використати https://developer.android.com/develop/ui/views/layout/constraint-layout#constrain-chain-->
     <TextView
         android:id="@+id/tv_already_register"
         style="@style/TextView.Gray14"
@@ -53,6 +67,7 @@
         app:layout_constraintHorizontal_bias="0.379"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!--    TODO Щось не зрозумів, для чого тут android:theme-->
     <TextView
         android:id="@+id/tv_sign_in"
         android:layout_width="wrap_content"
@@ -66,6 +81,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tv_already_register" />
 
+    <!--    TODO Значення ресурсу android:text можна виправити, щоб не було примусового переносу по \n. Тоді текст буде в одному рядку і gravity="center" не буде потрібним-->
+    <!--    TODO tools:ignore="MissingConstraints" зайве-->
     <TextView
         android:id="@+id/tv_clicking_if_u_agree"
         style="@style/TextView.White"
@@ -77,6 +94,10 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
+    <!--    TODO неліпший спосіб кнопку google робити. Якщо змінити розміри екрану чи орієнтацію - все злітає-->
+    <!--    TODO Horizontal_bias ні на що не впливає-->
+    <!--    TODO зайвий tools:ignore="MissingConstraints"-->
+    <!--    TODO іконка google стискається, якщо розмір екрану вказаний нестандартний-->
     <Button
         android:id="@+id/button_google"
         android:layout_width="0dp"
@@ -92,6 +113,8 @@
         app:layout_constraintStart_toStartOf="@+id/bt_register"
         tools:ignore="MissingConstraints" />
 
+    <!--    TODO tools:ignore="MissingConstraints" зайвий-->
+    <!--    TODO значення background не має стану нажатої кнопки-->
     <Button
         android:id="@+id/bt_register"
         android:layout_width="0dp"
@@ -120,6 +143,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!--    TODO В android:gravity є підказка: Use "start" instead of "left" to ensure correct behavior in right-to-left locales-->
+    <!--    TODO constraintHorizontal_bias не впливає-->
+    <!--    TODO tools:ignore="MissingConstraints" зайве-->
     <android.support.design.widget.TextInputLayout
         android:id="@+id/til_EmailAddress"
         android:layout_width="0dp"
@@ -140,6 +166,11 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints">
 
+        <!--        TODO layout_gravity так само-->
+        <!--        TODO Чи є виправданим саме таке значення ellipsize?-->
+        <!--        TODO inputType неправильний. Для email має бути textEmailAddress-->
+        <!--        TODO android:password є deprecated-->
+<!--        TODO прибрати все, що не впливає на розташування та відображення цього View. Наприклад ellipsize, gravity і т.д.-->
         <android.support.design.widget.TextInputEditText
             android:id="@+id/text_email"
             style="@style/TextView.Gray14"
@@ -162,6 +193,9 @@
     </android.support.design.widget.TextInputLayout>
 
 
+<!--    TODO В android:gravity є підказка: Use "start" instead of "left" to ensure correct behavior in right-to-left locales-->
+<!--    TODO app:layout_constraintHorizontal_bias="0.0" не впливає-->
+<!--    TODO tools:ignore="MissingConstraints" зайвий-->
     <android.support.design.widget.TextInputLayout
         android:id="@+id/til_editTextPassword"
         android:layout_width="0dp"
@@ -182,6 +216,9 @@
         app:layout_constraintVertical_bias="0.45"
         tools:ignore="MissingConstraints">
 
+<!--        TODO layout_gravity так само-->
+<!--        TODO inputType треба замінити на textPassword-->
+<!--        TODO android:password є deprecated-->
         <android.support.design.widget.TextInputEditText
             android:id="@+id/text_password"
             style="@style/TextView.Gray14"

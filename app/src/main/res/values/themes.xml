@@ -1,5 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
+
+<!--    TODO коли видалити стандартні кольори, посилання на них, наприклад <item name="colorPrimary">@color/purple_500</item>, теж посипляться. Треба це владнати-->
     <style name="Theme.MyApp20" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>

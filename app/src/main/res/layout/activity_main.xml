@@ -169,6 +169,7 @@
             app:layout_constraintTop_toTopOf="@+id/button_in"
             tools:ignore="MissingConstraints,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
+<!--    TODO layout_constraintVertical_bias зайвий-->
         <Button
             android:id="@+id/button_in"
             android:layout_width="60dp"

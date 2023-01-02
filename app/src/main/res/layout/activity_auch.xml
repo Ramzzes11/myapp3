@@ -170,6 +170,7 @@
         <!--        TODO Чи є виправданим саме таке значення ellipsize?-->
         <!--        TODO inputType неправильний. Для email має бути textEmailAddress-->
         <!--        TODO android:password є deprecated-->
+<!--        TODO прибрати все, що не впливає на розташування та відображення цього View. Наприклад ellipsize, gravity і т.д.-->
         <android.support.design.widget.TextInputEditText
             android:id="@+id/text_email"
             style="@style/TextView.Gray14"
